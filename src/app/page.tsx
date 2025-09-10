@@ -69,7 +69,7 @@ export default function Home() {
                 🏠 Property Value
               </CardTitle>
               <CardDescription>
-                Monitor your property's market value and track equity growth over time.
+                Monitor your property&apos;s market value and track equity growth over time.
               </CardDescription>
             </CardHeader>
             <CardContent>

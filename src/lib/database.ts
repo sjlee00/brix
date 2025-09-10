@@ -1,5 +1,6 @@
 import { supabase } from './supabase'
 import { 
+  User,
   Property, 
   Expense, 
   MaintenanceTask, 
@@ -267,7 +268,7 @@ export const userService = {
     return data
   },
 
-  async updateProfile(userId: string, updates: any) {
+  async updateProfile(userId: string, updates: Partial<User>) {
     const { data, error } = await supabase
       .from('users')
       .update(updates)

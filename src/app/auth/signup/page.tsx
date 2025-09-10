@@ -36,7 +36,7 @@ export default function SignUp() {
           router.push('/dashboard')
         }, 2000)
       }
-    } catch (err) {
+    } catch {
       setError('An unexpected error occurred')
     } finally {
       setIsLoading(false)
@@ -57,7 +57,7 @@ export default function SignUp() {
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">Account Created!</h2>
                 <p className="text-gray-600 mb-4">
-                  Welcome to Brix! You'll be redirected to your dashboard shortly.
+                  Welcome to Brix! You&apos;ll be redirected to your dashboard shortly.
                 </p>
                 <p className="text-sm text-gray-500">
                   Please check your email to verify your account.

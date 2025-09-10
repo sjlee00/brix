@@ -31,7 +31,7 @@ export default function Dashboard() {
           Welcome back, {user.full_name || user.email}!
         </h1>
         <p className="text-gray-600">
-          Here's an overview of your home management dashboard.
+          Here&apos;s an overview of your home management dashboard.
         </p>
       </div>
 

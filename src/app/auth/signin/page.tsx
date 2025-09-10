@@ -30,7 +30,7 @@ export default function SignIn() {
       } else if (data.user) {
         router.push('/dashboard')
       }
-    } catch (err) {
+    } catch {
       setError('An unexpected error occurred')
     } finally {
       setIsLoading(false)
