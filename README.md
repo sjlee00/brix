@@ -1,36 +1,146 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Brix - Home Management Platform
 
-## Getting Started
+A comprehensive web application for homeowners to centrally manage their properties, including expense tracking, property value monitoring, maintenance scheduling, and marketplace services.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Financial Management**: Track home expenses, budgets, and generate tax reports
+- **Property Value Tracking**: Monitor market value, equity, and ROI
+- **Maintenance Management**: Schedule tasks, track service history, and manage warranties
+- **Financial Tools**: Escrow management and contractor payment processing
+- **Marketplace**: Access to home services and product recommendations
+- **Mobile Ready**: Responsive design optimized for all devices
+
+## 🛠 Tech Stack
+
+- **Frontend**: Next.js 14, TypeScript, Tailwind CSS
+- **UI Components**: Shadcn/ui
+- **Backend**: Supabase (PostgreSQL, Auth, Storage)
+- **State Management**: Zustand
+- **Forms**: React Hook Form with Zod validation
+- **Charts**: Recharts
+- **Deployment**: Vercel
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                    # Next.js app router pages
+│   ├── auth/              # Authentication pages
+│   ├── dashboard/         # Dashboard pages
+│   ├── expenses/          # Expense management
+│   ├── maintenance/       # Maintenance scheduling
+│   ├── property/          # Property management
+│   └── marketplace/       # Service marketplace
+├── components/            # Reusable UI components
+│   ├── ui/               # Shadcn/ui components
+│   └── layout/           # Layout components
+├── features/             # Feature-specific components
+├── hooks/                # Custom React hooks
+├── lib/                  # Utility functions and configs
+├── store/                # Zustand stores
+└── types/                # TypeScript type definitions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js 18+ 
+- npm or yarn
+- Supabase account
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd brix
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Set up environment variables:
+```bash
+cp .env.local.example .env.local
+```
 
-## Deploy on Vercel
+4. Configure your Supabase project:
+   - Create a new Supabase project
+   - Get your project URL and anon key
+   - Update `.env.local` with your Supabase credentials
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. Run the development server:
+```bash
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+6. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 🗄 Database Schema
+
+The application uses Supabase with the following main tables:
+
+- `users` - User profiles and authentication
+- `properties` - Property information and details
+- `expenses` - Home-related expenses and receipts
+- `maintenance_tasks` - Maintenance scheduling and tracking
+- `budgets` - Budget management and limits
+- `contractors` - Service provider information
+
+## 🔧 Development
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
+
+### Adding New Components
+
+Use Shadcn/ui CLI to add new components:
+
+```bash
+npx shadcn@latest add [component-name]
+```
+
+### Code Style
+
+- Use TypeScript for all new code
+- Follow the existing folder structure
+- Use Tailwind CSS for styling
+- Implement proper error handling
+- Write descriptive commit messages
+
+## 🚀 Deployment
+
+The application is configured for deployment on Vercel:
+
+1. Connect your GitHub repository to Vercel
+2. Set up environment variables in Vercel dashboard
+3. Deploy automatically on push to main branch
+
+## 📝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Support
+
+For support, email support@brix.com or join our Discord community.
+
+---
+
+Built with ❤️ for homeowners everywhere.
